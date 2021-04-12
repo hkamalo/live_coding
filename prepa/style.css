@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+ul {
+  position: relative;
+  display: flex;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+ul li a .fa {
+  font-size: 8em;
+  color: rgb(44, 43, 43);
+}
+
+ul li::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 8em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1)::before {
+  content: "\f2be";
+  color: rgb(31, 214, 31);
+  border-bottom: 4px solid rgb(31, 214, 31);
+}
+
+ul li:nth-child(2)::before {
+  content: "\f008";
+  color: rgb(209, 28, 28);
+  border-bottom: 4px solid rgb(209, 28, 28);
+}
+
+ul li:nth-child(3)::before {
+  content: "\f002";
+  color: rgb(7, 233, 222);
+  border-bottom: 4px solid rgb(7, 233, 222);
+}
+
+ul li:hover::before {
+  height: 100%;
+}
